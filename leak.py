@@ -42,7 +42,7 @@ for i in range(0,20):
     x[i] = x[i]/df['people'][i]
 
 
-stdv = statistics.stdev(x) #Находим стандартное откклонение
+stdv = statistics.stdev(x) #Находим стандартное откклонение standard deviation
 
 
 x2=np.array(x)
