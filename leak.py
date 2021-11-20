@@ -2,7 +2,7 @@ import json
 import pandas as pd
 import numpy as np
 import statistics
-import MySQLdb
+
 
 # data = pd.read_json("db.json")
 # data2 = json.loads(data)
@@ -73,13 +73,19 @@ else:
 
 #write data to database
 
-db = MySQLdb.connect(host="localhost", user="1", passwd="123", db="oras", charset='utf8')
 
-cursor = db.cursor()
+try:
+    import MySQLdb
 
-sql = "INSERT INTO measurements(consumption) VALUES ('Possible leakage in the apartment',leak)"
+    db = MySQLdb.connect(host="localhost", user="1", passwd="123", db="oras", charset='utf8')
+
+    cursor = db.cursor()
+
+    sql = "INSERT INTO measurements(consumption) VALUES ('Possible leakage in the apartment',leak)"
 
 
-cursor.execute(sql)
+    cursor.execute(sql)
 
-db.commit()
+    db.commit()
+except:
+    print('Database connection failure')
