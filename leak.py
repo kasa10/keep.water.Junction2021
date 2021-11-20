@@ -35,6 +35,12 @@ for i in range(0,20):
     x.append(df2["Consumption"].mean())
 
 
+#Делим на ккол-во людей
+df[df.keys()[0]] = pd.to_numeric(df[df.keys()[0]])
+for i in range(0,20):
+    x[i] = x[i]/df['people'][i]
+
+
 stdv = statistics.stdev(x) #Находим стандартное откклонение
 
 
@@ -49,6 +55,7 @@ x = np.array(x).tolist()
 if max > stdv:  #Если превышает отклонение, то протечка
     leak = x.index(max)
     print("Possible leakage in the apartment ",leak)
+    print(x[leak])
 else:
     leak = x.index(max)
     print("No leak detected")
