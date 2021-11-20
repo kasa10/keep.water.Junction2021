@@ -39,7 +39,7 @@ else:
     print('ID of a similar user', new2['ID'].iloc(0)[1])
 
 
-print('Prediction of water consumption based on a similar user',user[user['ID']==similar]['consumption'][similar-1])
+print('Prediction of water consumption in year based on a similar user',user[user['ID']==similar]['consumption'][similar-1])
 
 
 try:
