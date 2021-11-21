@@ -4,7 +4,7 @@
 ## Our team:
 ### Kirill Kasmynin - kirill.kas@mail.ru
 ### Alex Matveeva - alexmeeva@gmail.com
-### Tomás Silva - tms.smt02@gmail.com
+### Tomás Silva - tomas.magueija.silva@gmail.com
 
 #### Our mobile application will allow you to improve water consumption, creates useful habits for the user, finds leaks, train user to use water most efficiently, predicts the user's water consumption and gamify the process of reasonable use of water.
 
